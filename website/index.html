@@ -139,7 +139,7 @@ Call&lt;User> getUser(@HeaderMap Map&lt;String, String&gt; headers)</pre>
               <p>Converters can be added to support other types. Six sibling modules adapt popular serialization libraries for your convenience.</p>
               <ul>
                 <li><a href="https://github.com/google/gson">Gson</a>: <code>com.squareup.retrofit2:converter-gson</code></li>
-                <li><a href="http://wiki.fasterxml.com/JacksonHome">Jackson</a>: <code>com.squareup.retrofit2:converter-jackson</code></li>
+                <li><a href="https://github.com/FasterXML/jackson">Jackson</a>: <code>com.squareup.retrofit2:converter-jackson</code></li>
                 <li><a href="https://github.com/square/moshi/">Moshi</a>: <code>com.squareup.retrofit2:converter-moshi</code></li>
                 <li><a href="https://developers.google.com/protocol-buffers/">Protobuf</a>: <code>com.squareup.retrofit2:converter-protobuf</code></li>
                 <li><a href="https://github.com/square/wire">Wire</a>: <code>com.squareup.retrofit2:converter-wire</code></li>
@@ -175,8 +175,9 @@ implementation 'com.squareup.retrofit2:retrofit:<span class="version pln"><em>(i
               <p>Retrofit requires at minimum Java 8+ or Android API 21+.</p>
 
               <h4>R8 / ProGuard</h4>
-              <p>If you are using R8 or ProGuard add the options from <a href="https://github.com/square/retrofit/blob/master/retrofit/src/main/resources/META-INF/proguard/retrofit2.pro">this file</a>.</p>
-              <p>You might also need rules for OkHttp and Okio which are dependencies of this library.</p>
+              <p>If you are using R8 the shrinking and obfuscation rules are included automatically.</p>
+              <p>ProGuard users must manually add the options from <a href="https://github.com/square/retrofit/blob/master/retrofit/src/main/resources/META-INF/proguard/retrofit2.pro">retrofit2.pro</a>.</p>
+              <p>You might also need rules for <a href="https://square.github.io/okhttp/r8_proguard">OkHttp</a> and <a href="https://github.com/square/okio#r8--proguard">Okio</a> which are dependencies of this library.</p>
             </section>
 
             <section id="contributing">
